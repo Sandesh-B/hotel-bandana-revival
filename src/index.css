@@ -1,96 +1,76 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Hotel Bandana Design System - Luxury Heritage Aesthetics */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 25 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Luxury Heritage Color Palette */
+    --primary: 35 45% 25%; /* Deep Heritage Brown */
+    --primary-foreground: 45 85% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 25% 92%; /* Warm Cream */
+    --secondary-foreground: 25 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 42 88% 65%; /* Nepalese Gold */
+    --accent-foreground: 25 35% 15%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 45 15% 95%;
+    --muted-foreground: 25 15% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 25% 88%;
+    --input: 45 25% 88%;
+    --ring: 35 45% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Heritage Design Tokens */
+    --heritage-stone: 30 15% 85%;
+    --heritage-wood: 25 35% 35%;
+    --heritage-gold: 42 88% 65%;
+    --heritage-copper: 15 65% 55%;
+    --heritage-ivory: 45 85% 95%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 8%;
+    --foreground: 45 85% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 25% 10%;
+    --card-foreground: 45 85% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 25% 8%;
+    --popover-foreground: 45 85% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 42 88% 65%;
+    --primary-foreground: 25 25% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 35% 15%;
+    --secondary-foreground: 45 85% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 42 88% 65%;
+    --accent-foreground: 25 25% 8%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 25 35% 15%;
+    --muted-foreground: 45 25% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 35% 15%;
+    --input: 25 35% 15%;
+    --ring: 42 88% 65%;
   }
 }
 
@@ -101,5 +81,153 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Heritage Button Variants */
+  .btn-heritage {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 
+           px-8 py-4 rounded-lg font-medium tracking-wide
+           transition-all duration-300 shadow-lg hover:shadow-xl
+           border border-primary/20;
+  }
+
+  .btn-gold {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90
+           px-8 py-4 rounded-lg font-medium tracking-wide
+           transition-all duration-300 shadow-lg hover:shadow-xl
+           border border-accent/20;
+  }
+
+  .btn-outline-heritage {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           px-8 py-4 rounded-lg font-medium tracking-wide
+           transition-all duration-300 bg-transparent;
+  }
+
+  /* Heritage Card Styles */
+  .heritage-card {
+    @apply bg-card border border-border rounded-xl shadow-lg hover:shadow-2xl
+           transition-all duration-500 overflow-hidden backdrop-blur-sm;
+  }
+
+  .luxury-gradient {
+    background: linear-gradient(135deg, hsl(var(--heritage-ivory)) 0%, hsl(var(--heritage-stone)) 100%);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--heritage-gold)) 0%, hsl(var(--heritage-copper)) 100%);
+  }
+
+  /* Heritage Typography */
+  .heritage-title {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold text-primary
+           leading-tight tracking-tight;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .heritage-subtitle {
+    @apply text-xl md:text-2xl font-medium text-muted-foreground
+           leading-relaxed;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold text-primary mb-4
+           leading-tight;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Luxury Animations */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .luxury-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  /* Heritage Decorative Elements */
+  .heritage-divider {
+    @apply w-24 h-1 bg-gradient-to-r from-accent to-primary/50 mx-auto rounded-full;
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
 }
