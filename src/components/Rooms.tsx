@@ -69,7 +69,7 @@ export const Rooms = () => {
                     </div>
                   ))}
                 </div>
-                <Button className="btn-heritage w-full">View Details</Button>
+                <Button className="btn-heritage w-full" onClick={() => window.location.href = '/accommodation'}>View Details</Button>
               </CardContent>
             </Card>
           ))}

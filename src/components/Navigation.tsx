@@ -16,10 +16,11 @@ export const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Rooms', href: '#rooms' },
-    { name: 'Amenities', href: '#amenities' },
-    { name: 'Heritage', href: '#heritage' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Rooms', href: '/accommodation' },
+    { name: 'Activities', href: '/activities' },
+    { name: 'Services', href: '/services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -71,7 +72,7 @@ export const Navigation = () => {
             </div>
 
             <div className="hidden lg:block">
-              <Button className="btn-gold">Book Now</Button>
+              <Button className="btn-gold" onClick={() => window.location.href = '/booking'}>Book Now</Button>
             </div>
 
             <button
@@ -97,7 +98,7 @@ export const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="btn-gold w-full mt-4">Book Now</Button>
+              <Button className="btn-gold w-full mt-4" onClick={() => window.location.href = '/booking'}>Book Now</Button>
             </div>
           </div>
         )}

@@ -46,10 +46,10 @@ export const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button size="lg" className="btn-gold text-lg px-8 py-4">
+            <Button size="lg" className="btn-gold text-lg px-8 py-4" onClick={() => window.location.href = '/booking'}>
               Reserve Your Stay
             </Button>
-            <Button size="lg" variant="outline" className="btn-outline-heritage text-lg px-8 py-4 text-white border-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline" className="btn-outline-heritage text-lg px-8 py-4 text-white border-white hover:bg-white hover:text-primary" onClick={() => window.location.href = '/accommodation'}>
               Explore Hotel
             </Button>
           </div>
